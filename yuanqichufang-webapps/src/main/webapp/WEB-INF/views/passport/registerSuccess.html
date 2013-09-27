@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>注册—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="../resources/styles/reset.css">
+    <link rel="stylesheet" href="../resources/styles/common.css">
+    <link rel="stylesheet" href="../resources/styles/register.css">
+</head>
+
+<body>
+    #parse("/include/header.html")
+
+    <div class="wrapper container">
+        <!--/ 注册成功 /-->
+        <div class="successful">
+            <legend><img src="../resources/images/passport/register-title.gif" alt="账号注册"></legend>
+            <p>恭喜！注册成功！欢迎您：$passportObj.passport</p>
+            <a href="/"><span id="countdown">10</span>秒后跳转到首页</a>
+        </div>
+
+
+
+        <img class="container-line" src="../resources/images/footer-line.gif">
+
+
+
+        #parse("/include/product_link.html")
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+    <script src="../resources/scripts/jquery-1.10.2.js"></script>
+    <script src="../resources/scripts/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.about-title {
+    display: block;
+    margin: 20px auto;
+}
+
+.about {
+    margin: 0 auto;
+    padding: 1em 0 5em;
+    width: 50em;
+    font-size: 16px;
+}
+
+.about p {
+    padding-bottom: .5em;
+}
+
+.about img {
+    display: block;
+    margin: 2em auto .5em;
+}
+
+.em {
+    color: #88422f;
+    font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="健康 养生 草本 饮品  苡仁 玳玳花 金银花 槐米 淡竹叶 蜂蜜">
+    <meta name="description" content="由于内在健康问题或者外在环境问题，以及新陈代谢本身，人体不断生成各类废物甚至毒素。“解”饮犹如高效的清道夫，天然排毒养生，帮助恢复身体纯净，健康容颜自然来。">
+
+    <title>解—排毒养颜，身体清道夫—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/product.css">
+
+    <!–[if lt IE9]><script src="/resources/scripts/html5.js"></script><![endif]–>
+</head>
+
+<body>
+
+
+
+
+#parse("/include/header.html")
+
+<div class="wrapper container j">
+    <img class="container-line" src="/resources/images/footer-line.gif">
+
+    <div class="outline">
+        <div class="price">${product.getIntPrice()}</div>
+        <!--
+        <a class="now-buy-link" href="/orderBook/fillorder?productId=5&count=1" title="立即购买"><img src="/resources/images/product/a-t.gif" alt="安"></a>
+        -->
+        <a class="now-buy-link" href="/cart/item/add?productId=4&count=1" title="立即购买"><img src="/resources/images/product/j-t.gif" alt="安"></a>
+    </div>
+
+    <img class="container-line" src="/resources/images/footer-line.gif">
+    <img class="raw-material" src="/resources/images/product/j-l.gif" alt="原料">
+    <img class="container-line" src="/resources/images/footer-line.gif">
+
+    <div class="delivery">
+        <div class="time">
+            <strong>提前预定 免费外送</strong>
+            <p>提前12小时预订 即可享受免外送费</p>
+        </div>
+        <div class="bundle">
+            <strong>元气礼包 打包购买更实惠</strong>
+            <p>当日购买4杯以及4杯以上免外送费</p>
+        </div>
+        <a class="now-buy-link" href="/cart/item/add?productId=4&count=1"><img src="/resources/images/product/j-w-b.gif" alt="立即购买"></a>
+    </div>
+
+    <img class="container-line" src="/resources/images/footer-line.gif">
+
+    #parse("/include/product_link.html")
+
+</div>
+
+#parse("/include/footer.html")
+
+</body>
+</html>

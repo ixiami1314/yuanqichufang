@@ -1,0 +1,79 @@
+.register-form {
+    margin: 30px 0 40px 180px;
+    font-size: 20px;
+}
+
+.register-form label {
+    display: inline-block;
+    margin: 22px 0 0 .5em;
+}
+
+.register-form label span {
+    display: inline-block;
+    width: 5em;
+    line-height: 36px;
+}
+
+.register-form label input {
+    display: inline-block;
+    border-radius: 1px;
+    border: 1px solid #bfbfbf;
+    width: 320px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 5px;
+}
+
+
+.submit {
+    display: blcok;
+    margin: 30px 0 0 9.8em;
+    border: 0;
+    width: 223px;
+    height: 81px;
+    background: url(../images/passport/btn-login.gif);
+}
+
+.verify-code {
+    display: inline-block;
+}
+
+.register-form label input.w7 {
+    width: 7em;
+}
+
+.reset-verify-code,
+.reset-verify-code:hover {
+    color: blue;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.form-line {
+    margin-left: 4em;
+}
+
+
+
+
+/* 注册成功 */
+.successful {
+    font-size: 20px;
+}
+
+.successful legend {
+    margin: 30px 0 0 180px;
+}
+
+.successful p {
+    background: url("../images/passport/register-suc.gif") no-repeat scroll left center transparent;
+    font-size: 30px;
+    margin: 50px 0 0 330px;
+    padding-left: 55px;
+}
+
+.successful a {
+    display: block;
+    margin: 20px 0 100px 385px;
+    color: #584841;
+}

@@ -1,0 +1,232 @@
+html, legend {
+    color: #000;
+    background: #fff;
+}
+
+body {
+    color: #584841;
+    font: 12px/1.5 "Microsoft YaHei", Tahoma, Helvetica, Arial, \5b8b\4f53;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img,
+input {
+    vertical-align: middle;
+}
+
+.hand,
+input[type=submit] {
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1015px;
+}
+
+.container {
+    min-height: 500px;
+    _height: 500px;
+}
+
+
+
+/* 页眉 */
+header {
+    height: 125px;
+}
+.logo {
+    float: left;
+    padding-top: 15px;
+}
+
+.header-nav,
+.logged-nav {
+    float: right;
+    text-align: center;
+    padding-top: 80px;
+}
+
+header .header-nav a {
+    margin: 0 0 0 1em;
+    letter-spacing: .5em;
+}
+
+.logged-nav {
+    font-size: 14px;
+}
+header .logged-nav a,
+header .logged-nav .welcome {
+    font-style: normal;
+    color: #584841;
+}
+header .logged-nav span {
+    padding: 0 10px;
+    color: #ccc;
+}
+
+
+
+/* 产品列表 */
+.product-list {
+    margin: 30px auto 50px;
+    text-align: center;
+}
+
+.product-list a {
+    padding-top: 20px;
+    padding-left: 30px;
+    display: inline-block;
+}
+
+.product-list a:hover {
+    box-shadow: 0 0 10px 0 #959595;
+}
+
+
+/* 页脚 */
+footer {
+    padding-bottom: 35px;
+    color: #959595;
+}
+header a,
+footer a {
+    color: #959595;
+}
+
+.container-line,
+.footer-line {
+    display: block;
+    margin: 0 auto;
+    height: 4px;
+    overflow: hidden;
+}
+
+.container-line {
+    /*position: relative;*/
+    /*top: -5px;*/
+    line-height: 0;
+    font-size: 0;
+}
+
+.footer-nav {
+    margin: 35px auto;
+    text-align: center;
+}
+
+.header-nav a,
+.footer-nav a {
+    display: inline-block;
+    margin: 0 .5em;
+    width: 115px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    background: url(../images/link-bg.gif);
+}
+
+.header-nav a:hover,
+.footer-nav a:hover {
+    box-shadow: inset 0 0 5px 0 #959595;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+.red {
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* 触发 IE 6/7 的 hasLayout */
+.clearfix {
+    zoom: 1;
+}
+
+
+
+/* 错误提示 */
+.error-warn {
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    height: 100%;
+    /*line-height: 1.5;*/
+    color: red;
+    background: url(../images/passport/error-icon.gif) no-repeat center left;
+}
+
+
+
+
+.js-tips {
+    position: absolute;
+    z-index: 1000;
+    border: 2px solid #f1e7cc;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.js-tips-title {
+    font-size: 14px;
+}
+
+.close-js-tips {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+    font-family: Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier New", Courier, monospace;
+    background-color: #f1f1f1;
+}
+.close-js-tips:hover {
+    background-color: #ccc;
+}
+
+.js-tips-riangle {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f1e7cc;
+}

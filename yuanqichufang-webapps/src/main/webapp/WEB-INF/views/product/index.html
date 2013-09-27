@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>元气产品_元气厨房</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/product-list.css">
+
+    <!–[if lt IE9]><script src="/resources/scripts/html5.js"></script><![endif]–>
+</head>
+
+<body>
+    #parse("/include/header.html")
+
+
+
+    <div class="wrapper container">
+        <img class="product-list-title" src="/resources/images/product-title.gif" alt="元气产品">
+
+        <div class="product-list-page">
+
+            #foreach ($product in $products)
+            <a target="_blank" href="/product/$product.shortChar"><img src="/resources/images/product-${product.shortChar}-165.gif" alt="$product.name"></a>
+            <p>$product.description</p>
+            <p></p>
+            <p></p>
+
+            #end
+
+        </div>
+    </div>
+
+
+
+    #include("/include/footer.html")
+</body>
+</html>

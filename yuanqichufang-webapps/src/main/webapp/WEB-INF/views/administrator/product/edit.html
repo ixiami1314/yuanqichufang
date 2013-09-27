@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>安</title>
+</head>
+
+<body>
+
+    <form method="POST">
+        <label>产品名称：</label><input type="text" name="name" value="$!product.name" /><br/>
+        <label>产品描述：</label><input type="text" name="description" value="$!product.description" /><br/>
+        <label>产品价格：</label><input type="text" name="price" value="$!product.price" /><br/>
+        <input type="hidden" name="id" value="$!product.id" />
+        <input type="submit" name="提交" />
+    </form>
+
+</body>
+</html>

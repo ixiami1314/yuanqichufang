@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>1.输入邮箱地址_找回密码</title>
+
+    <link rel="stylesheet" href="../resources/styles/reset.css">
+    <link rel="stylesheet" href="../resources/styles/common.css">
+    <link rel="stylesheet" href="../resources/styles/forgot.css">
+</head>
+
+<body>
+    <header class="wrapper clearfix">
+        <a class="logo" href="../index.html" title="回首页"><img src="../resources/images/logo.gif" alt="元气厨房 健康熬出来"></a>
+        <div class="header-nav">
+            <a href="passport/login.html">登录</a>
+            <a href="passport/register.html">注册</a>
+            <a href="shopping.html">购物车</a>
+        </div>
+    </header>
+
+
+
+    <div class="wrapper container clearfix">
+        <img class="container-line" src="../resources/images/footer-line.gif">
+
+        <img class="forgot-title" src="../resources/images/passport/forgot-title-1.jpg" alt="1.输入邮箱地址">
+        <form id="forgotEmailForm" class="forgot-email-form" method="post">
+            <div class="form-line">
+                <label>
+                    <span>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</span>
+                    <input type="text" name="account" maxlength="25" placeholder="请输入您的账号">
+                </label>
+                <span class="error-warn">请输入您的账号</span>
+            </div>
+            <div class="form-line">
+                <label>
+                    <span>验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+                    <input class="w6" type="text" name="verifycode" maxlength="6" placeholder="请输入验证码">
+                </label>
+                <img class="verify-code hand" width="115" height="35" src="../resources/images/banner.jpg">
+                <a class="reset-verify-code" href="javascript:;">换一张</a>
+                <span class="error-warn">请输入验证码</span>
+            </div>
+
+            <input class="submit hand" type="submit" value="">
+        </form>
+    </div>
+
+
+
+    <footer class="wrapper">
+        <img class="footer-line" src="../resources/images/footer-line.gif">
+        <div class="footer-nav">
+            <a href="about.html">关于我们</a>
+            <a href="product.html">元气产品</a>
+            <a href="follow.html">关注我们</a>
+        </div>
+        <p>Copyright&nbsp;&copy;&nbsp;2013 元气厨房.&nbsp;All rights reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a target="_blank" href="#">沪ICP备12345678号</a></p>
+    </footer>
+
+
+
+    <script src="../resources/scripts/jquery-1.10.2.js"></script>
+    <script src="../resources/scripts/forgot.js"></script>
+</body>
+</html>

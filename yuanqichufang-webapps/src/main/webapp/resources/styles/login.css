@@ -1,0 +1,52 @@
+.login-deploy,
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form {
+    width: 380px;
+    font-size: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin: 22px 0 0 .5em;
+}
+
+.login-form label span {
+    display: inline-block;
+    letter-spacing: 2em;
+    margin-right: -1em;
+    line-height: 36px;
+}
+
+.login-form label input {
+    display: inline-block;
+    border-radius: 1px;
+    border: 1px solid #bfbfbf;
+    width: 238px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 5px;
+}
+
+.forgot {
+    display: block;
+    margin: 15px 24px 0 auto;
+    width: 4em;
+    font-size: 14px;
+    color: blue;
+}
+
+.submit {
+    display: blcok;
+    margin: 15px 0 0 6em;
+    border: 0;
+    width: 223px;
+    height: 81px;
+    background: url(../images/passport/btn-login.gif);
+}
+
+.login-form .error-warn {
+    margin-left: 120px;
+}

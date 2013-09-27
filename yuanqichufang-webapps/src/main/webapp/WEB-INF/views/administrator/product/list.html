@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>安</title>
+</head>
+
+<body>
+
+    #foreach ($product in $products)
+    <div>
+        <label>产品名称：$product.name</label><br/>
+        <p>产品简介：$product.description</p>
+        <label>产品价格：$product.price</label>
+    </div><br/>
+    #end
+
+    <a href="/administrator/product/edit">添加产品</a>
+
+</body>
+</html>

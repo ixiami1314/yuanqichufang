@@ -1,0 +1,416 @@
+.fill-orders-form,
+.fill-orders-list,
+.crat-list {
+    width: 100%;
+    font-size: 14px;
+}
+
+.my-orders-list thead,
+.fill-orders-list thead,
+.crat-list thead {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.orders-id,
+.my-orders-list thead tr,
+.my-orders-list tbody tr,
+.fill-orders-list thead tr,
+.fill-orders-list tbody tr,
+.crat-list thead tr,
+.crat-list tbody tr {
+    background: url(../images/order/order-line.gif) no-repeat bottom left;
+}
+
+.my-orders-list td,
+.my-orders-list th,
+.fill-orders-list td,
+.fill-orders-list th,
+.crat-list td,
+.crat-list th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.crat-title-photo {
+    width: 20%;
+}
+
+.crat-title-name {
+    width: 30%;
+}
+
+.crat-title-num {
+    width: 20%;
+}
+
+.crat-title-price {
+    width: 20%;
+}
+
+.crat-title-operating {
+    width: 10%;
+}
+
+.crat-list-item:hover {
+    background-color: #fffff6;
+}
+
+.crat-item-photo {
+    display: block;
+    margin: 15px auto 20px;
+    width: 120px;
+}
+
+.numItem {
+    margin: 0 auto;
+    width: 110px;
+}
+
+.reduce,
+.increase {
+    display: inline-block;
+    width: 25px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.reduce {
+    background: url(../images/order/reduce.gif) no-repeat center;
+}
+
+.increase {
+    background: url(../images/order/increase.gif) no-repeat center;
+}
+
+.amount {
+    display: inline-block;
+    width: 3.5em;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cbcbcb;
+    font-weight: bold;
+    font-size: 110%;
+    color: #000;
+    text-align: center;
+    font-family: arial;
+}
+
+.delete {
+    color: #584841;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.crat-list tfoot td,
+.crat-list tfoot p {
+    text-align: right;
+}
+
+.crat-list tfoot p {
+    height: 50px;
+    line-height: 50px;
+}
+
+.submit {
+    display: block;
+    margin: 0 0 60px auto;
+    border: 0;
+    width: 223px;
+    height: 81px;
+    background: url(../images/order/checkout.gif);
+}
+
+
+
+
+/* 填写订单 */
+.fill-orders-form legend {
+    display: block;
+    margin: 40px 0 15px;
+}
+.fill-orders-form tfoot p {
+    padding-top: 15px;
+    text-align: right;
+}
+.fo-title-photo {
+    width: 20%;
+}
+.fo-title-name {
+    width: 30%;
+}
+.fo-title-num {
+    width: 25%;
+}
+.fo-title-price {
+    width: 25%;
+}
+.fo-item-photo {
+    display: block;
+    margin: 15px auto 20px;
+    width: 100px;
+}
+
+.fo-total-price {
+    margin-top: 25px;
+    line-height: 2;
+    /*font-size: 16px;*/
+}
+
+.fo-payables {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.co-info dd,
+.fo-pl8 {
+    padding-left: 80px;
+}
+
+.fo-date {
+    margin-bottom: 5px;
+}
+
+.fo-time {
+
+}
+
+.fo-time input {
+    margin-right: 3px;
+}
+
+/*.fo-address label,*/
+.fo-time label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.fo-promo {
+    display: block;
+}
+
+.fo-address label span,
+.fo-promo span {
+    display: inline-block;
+    letter-spacing: 1em;
+    margin-right: -.5em;
+    line-height: 36px;
+}
+
+.fo-address label input,
+.fo-date input,
+.fo-promo input {
+    display: inline-block;
+    border-radius: 1px;
+    border: 1px solid #bfbfbf;
+    width: 320px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 5px;
+}
+
+.fo-date input {
+    width: 180px;
+}
+
+.fo-address label {
+    display: block;
+    margin-top: 10px;
+}
+
+.fo-submit {
+    display: block;
+    margin: 30px auto 60px;
+    border: 0;
+    width: 223px;
+    height: 81px;
+    background: url(../images/order/submit-order.gif);
+}
+
+
+.fo-address label .w180 {
+    width: 180px;
+}
+
+.fo-address .error-warn {
+    letter-spacing: normal;
+}
+.fo-subtotal,
+.fo-free-shipping {
+    padding: 0 20px 0 5px;
+}
+.fo-free-shipping em {
+    font-style: normal;
+    color: blue;
+}
+
+
+.js-tips-title .red {
+    padding: 0 2px;
+}
+
+.imbody-product-list {
+    margin-top: 15px;
+}
+.imbody-product-list a {
+    margin-right: 10px;
+}
+.imbody-product-list a,
+.imbody-product-list img {
+    display: inline-block;
+    width: 81px;
+}
+
+.order-complete-tips {
+    background: url("../images/passport/register-suc.gif") no-repeat scroll left center transparent;
+    font-size: 30px;
+    margin: 30px 0 30px 245px;
+    padding-left: 55px;
+}
+
+.orders-id {
+    line-height: 3em;
+    text-align: left;
+    font-size: 16px;
+}
+
+.co-info {
+    margin: 1em 0 2em;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 2em;
+}
+
+.co-info dt {
+    padding-bottom: 1em;
+}
+
+/* 我的订单 */
+.my-orders-list {
+    width: 100%;
+    font-size: 14px;
+}
+.mo-title-photo {
+    width: 20%;
+}
+.mo-title-name {
+    width: 20%;
+}
+.mo-title-num {
+    width: 15%;
+}
+.mo-title-price {
+    width: 15%;
+}
+.mo-title-info {
+    width: 15%;
+}
+.mo-title-state {
+    width: 15%;
+}
+.my-orders-list .crat-list-item em {
+    font-style: normal;
+}
+.cancel {
+    color: blue;
+}
+.cancel,
+.pay-type,
+.name,
+.state {
+    display: block;
+    line-height: 2em;
+}
+.name {
+    color: #584841;
+}
+.name .triangle {
+    display: inline-block;
+    margin-left: 1em;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid #584841;
+    border-left: 7px solid transparent;
+}
+
+.fs-tips {
+    max-width: 30em;
+}
+.mo-tips {
+    width: 20em;
+}
+
+.name .mo-tips {
+    top: 1em;
+    left: -10em;
+}
+
+
+/* 分页 */
+.pagination {
+    margin: 2em auto 4em;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    margin-right: 3px;
+    padding: .3em .8em;
+    font-size: 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #878787;
+}
+
+.pagination a:hover,
+.pagination .current {
+    font-weight: bold;
+    color: #fff;
+    background-color: #cc3300;
+}
+
+.pagination a:hover {
+    font-weight: normal;
+}
+
+.pagination a.disabled:hover {
+    cursor: default;
+    color: #ccc;
+    background-color: transparent;
+}
+
+.pagination .disabled {
+    cursor: default;
+    color: #ccc;
+    border-color: #eee;
+}
+
+.pagination span.disabled {
+    border: 1px solid #fff;
+}
+
+.orders-id-count,
+.orders-id-tit {
+    line-height: 50px;
+}
+.orders-id-tit td {
+    text-align: left;
+}
+.orders-id-tit td em {
+    padding-left: .5em;
+}
+
+.orders-id-count td {
+    text-align: right;
+    background-color: #f4f4f4;
+    padding-right: 1em;
+    font-family: '宋体';
+    font-size: 20px;
+    font-weight: bold;
+}

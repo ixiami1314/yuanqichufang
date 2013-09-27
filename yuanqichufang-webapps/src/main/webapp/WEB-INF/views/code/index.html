@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>元气厨房_健康熬出来_兑换码</title>
+
+    <link rel="stylesheet" href="resources/styles/reset.css">
+    <link rel="stylesheet" href="resources/styles/common.css">
+    <link rel="stylesheet" href="resources/styles/index.css">
+</head>
+
+
+<body>
+
+    #parse("/include/header.html")
+
+
+    <div class="wrapper container">
+
+        #if ($errorMessage)
+        <b>有点错误呀：$errorMessage</b> <br/>
+        #end
+        
+
+        <form method="POST">
+            请输入您的兑换码：<input type="text" name="code" />
+            <input type="submit" value="兑换" />
+        </form>
+
+
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+</body>
+</html>

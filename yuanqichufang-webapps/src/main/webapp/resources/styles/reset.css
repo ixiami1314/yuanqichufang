@@ -1,0 +1,166 @@
+/*
+    设置页面的前景色为黑色，背景色为白色。
+    以防止显示为用户自订义的颜色。
+    legend 在 IE6 下面不继承。
+*/
+html, legend {
+    color: #000;
+    background: #FFF;
+}
+
+/* 清除内边距、外边距 */
+body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* 结构元素 */
+dl, dt, dd, ul, ol, li, /* 列表元素 */
+pre, code, /* 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* 表单元素 */
+th, td, /* 表格元素 */
+iframe,
+/* html5 */
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+}
+
+/* html5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+mark {
+    background-color: #FF0;
+    color: #000;
+}
+
+/*
+    body 内的元素继承：
+        字体大小为 12 象素、
+        行高与字体高度一样、
+        默认字体优先顺序
+*/
+body {
+    font: 12px/1 Tahoma, Helvetica, Arial, \5b8b\4f53, sans-serif;
+}
+
+/* 请不要使用 li, 因为它的权重更高 */
+ul, ol {
+    list-style: none;
+}
+
+/* 链接默认没有下划线，鼠标放上去的时候显示下划线 */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 让链接里的 img 无边框 */
+iframe, fieldset, img {
+    border: 0;
+}
+
+/* 将斜体扶正，并清除默认风格 */
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+em,
+mark {
+    font-style: italic;
+}
+
+/* 统一等宽字体 */
+code, kbd, pre, samp, tt {
+    font-family: Menlo, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Consolas", "Courier New", Courier, monospace;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+/* 上边距与下边距根据字体大小设置 */
+/*h1, h2, h3 {*/
+    /*margin: .5em 0;*/
+/*}*/
+
+/* 继承字体大小 */
+h4, h5, h6,
+small {
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong,
+caption, th,
+mark {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th {
+    text-align: center;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+q:before, q:after {
+    content: "";
+}
+
+/* abbr 在 IE 6 下无效 */
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+/* IE 下继承字体大小 */
+input, button, textarea, select {
+    font-size: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    color: #D1D7DC;
+    background-color: #D1D7DC;
+}

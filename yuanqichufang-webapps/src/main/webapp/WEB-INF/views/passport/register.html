@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>注册—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="../resources/styles/reset.css">
+    <link rel="stylesheet" href="../resources/styles/common.css">
+    <link rel="stylesheet" href="../resources/styles/register.css">
+</head>
+
+<body>
+
+    #parse("/include/header.html")
+
+    <div class="wrapper container">
+        <img class="container-line" src="../resources/images/footer-line.gif">
+
+        <form id="registerForm" class="register-form" method="post">
+            <legend><img src="../resources/images/passport/register-title.gif" alt="账号注册"></legend>
+            <div class="form-line">
+                <label>
+                    <span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span>
+                    <input type="text" name="passport" maxlength="32" placeholder="请输入您的常用邮箱">
+                </label>
+                <!--
+                <span class="error-warn">请输入您的常用邮箱</span>
+                -->
+                #if($errorMessage_email)
+                <span class="error-warn">$errorMessage_email</span>
+                #end
+            </div>
+            <div class="form-line">
+                <label>
+                    <span>创建密码</span>
+                    <input type="password" name="password" maxlength="25" placeholder="6-25字符，字母、数字和符号的任意组合">
+                </label>
+                <!--
+                <span class="error-warn">请输入密码</span>
+                -->
+                #if($errorMessage_password_length)
+                <span class="error-warn">$errorMessage_password_length</span>
+                #end
+            </div>
+            <div class="form-line">
+                <label>
+                    <span>确认密码</span>
+                    <input type="password" name="repassword" maxlength="25" placeholder="请再次输入密码">
+                </label>
+                <!--
+                <span class="error-warn">请再次输入密码</span>
+                -->
+                #if($errorMessage_password)
+                <span class="error-warn">$errorMessage_password</span>
+                #end
+            </div>
+            <div class="form-line">
+                <label>
+                    <span>验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+                    <input class="w7" type="text" name="kaptchafield" maxlength="6" placeholder="请输入验证码">
+                </label>
+                <img class="verify-code hand" width="115" height="35" src="/Kaptcha.jpg">
+                <a class="reset-verify-code" href="javascript:;">换一张</a>
+                <!--
+                <span class="error-warn">请输入验证码</span>
+                -->
+                #if($errorMessage_verifycode)
+                <span class="error-warn">$errorMessage_verifycode</span>
+                #end
+            </div>
+            <input class="submit hand" type="submit" value="">
+        </form>
+
+
+
+
+        <img class="container-line" src="../resources/images/footer-line.gif"><br/>
+
+
+
+        #parse("/include/product_link.html")
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+    <script src="../resources/scripts/jquery-1.10.2.js"></script>
+    <script src="../resources/scripts/register.js"></script>
+</body>
+</html>

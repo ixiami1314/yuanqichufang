@@ -1,0 +1,26 @@
+
+    <header class="wrapper clearfix">
+        <a class="logo" href="/" title="回首页"><img src="/resources/images/logo.gif" alt="元气厨房 健康熬出来"></a>
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5c9814da448ea283904094a4efb697d1' type='text/javascript'%3E%3C/script%3E"));
+document.write('<div style="display:none;">' + unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5c9814da448ea283904094a4efb697d1' type='text/javascript'%3E%3C/script%3E") + '</div>');
+</script>
+
+        #if($login_passport)
+        <div class="logged-nav">
+            <em class="welcome">欢迎：${login_passport.getPassport()}</em><span>|</span>
+            <a href="/orderBook/myorders">我的订单</a><span>|</span>
+            <a href="/cart/">购物车</a><span>|</span>
+            <a href="/passport/logout">退出</a>
+        </div>
+        #else
+        <div class="header-nav">
+            <a href="/passport/login">登录</a>
+            <a href="/passport/register">注册</a>
+            <a href="/cart/">购物车</a>
+        </div>
+        #end
+    </header>

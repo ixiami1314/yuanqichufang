@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+				
+	<import resource="db.xml" />
+
+    <bean name="serviceSMS" class="com.yuanqichufang.service.SMSServiceImp1">
+        <property name="accountId" value="ixiami1314@gmail.com" />
+        <property name="accountKey" value="58bd195d91aba6088af571094123d50e" />
+    </bean>
+	
+</beans>

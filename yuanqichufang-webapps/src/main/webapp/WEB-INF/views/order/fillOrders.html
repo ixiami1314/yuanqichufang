@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>填写订单—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/order.css">
+</head>
+
+<body>
+
+    #parse("/include/header.html")
+
+
+    <div class="wrapper container">
+        <img class="container-line" src="/resources/images/footer-line.gif">
+
+        <img src="/resources/images/order/order-step-2.jpg" alt="填写订单">
+        <form id="fillOrdersForm" class="fill-orders-form" method="POST">
+            <table class="fill-orders-list">
+                <thead>
+                <tr>
+                    <th class="fo-title-photo"></th>
+                    <th class="fo-title-name">饮料名称</th>
+                    <th class="fo-title-num">数量</th>
+                    <th class="fo-title-price">单价</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                #foreach ($item in $cart.items)
+
+                <tr class="crat-list-item">
+                    <td><img class="fo-item-photo" src="/resources/images/product-${item.product.shortChar}-165.gif" alt="${item.product.description}"></td>
+                    <td>元气厨房 <b>${item.product.name}</b> 饮料</td>
+                    <td>$item.totalCount</td>
+                    <td>¥<strong class="item-price">$item.product.price</strong></td>
+                </tr>
+
+                #end
+
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <p>
+                            <span>运费：¥<strong>0</strong></span>
+                            <!--
+                            <span class="fo-free-shipping hand">（<em>想免外送费？</em>）</span>
+                            -->
+                            <span class="fo-subtotal">小计总额：¥<strong>${cart.totalPrice()}</strong></span>
+                            <img class="hand" src="/resources/images/order/btn-gather.gif" alt="免运费凑单">
+                        </p>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <legend><img src="/resources/images/order/tit-address.gif" alt="收货信息"></legend>
+            <div class="fo-address fo-pl8">
+                <label>
+                    <span>姓名</span>
+                    <input class="w180" type="text" placeholder="收货人" maxlength="30" name="cargoName">
+                    <!-- <span class="error-warn">请输入验证码</span> -->
+                </label>
+                <label>
+                    <span>手机</span>
+                    <input class="w180" type="text" placeholder="手机号" maxlength="11" name="cargoPhone">
+                    <!-- <span class="error-warn">请输入验证码</span> -->
+                </label>
+                <label>
+                    <span>地址</span>
+                    <input type="text" placeholder="详细地址" maxlength="80" name="cargoAddress">
+                </label>
+            </div>
+
+
+            <legend><img src="/resources/images/order/tit-time.gif" alt="送货时间"></legend>
+            <div class="fo-pl8">
+                <div class="fo-date">
+
+                    $!user.time
+                    <input type="text" placeholder="示例：2013-08-08" name="cargoDate">
+                    （提前12小时预订即可免外送费）
+                </div>
+                <div class="fo-time">
+                    <label><input type="radio" name="cargoDateArea" value="1" checked="checked">上午 11:00-12:00</label>
+                    <label><input type="radio" name="cargoDateArea" value="2">下午 13:00-14:00</label>
+                    <label><input type="radio" name="cargoDateArea" value="3">下午 15:00-16:00</label>
+                </div>
+            </div>
+
+            <!--
+            <legend><img src="/resources/images/order/tit-gift.gif" alt="我的礼券"></legend>
+            <label class="fo-promo fo-pl8"><span>优惠码</span><input type="text" placeholder="优惠码" maxlength="50" name="promocode"></label>
+
+            <p class="fo-total-price">商品金额：¥<strong>${cart.totalPrice()}</strong></p>
+            <p class="fo-payables">应付金额：¥<strong>${cart.totalPrice()}</strong></p>
+            -->
+
+
+            <input class="fo-submit" type="submit" value="" title="提交订单">
+        </form>
+
+
+
+        <img class="container-line" src="/resources/images/footer-line.gif">
+        <br/><br/>
+
+
+
+
+        #parse("/include/product_link.html")
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+    <script src="/resources/scripts/jquery-1.10.2.js"></script>
+    <script src="/resources/scripts/register.js"></script>
+</body>
+</html>

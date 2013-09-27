@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>我的订单—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/order.css">
+
+    <!–[if lt IE9]><script src="/resources/scripts/html5.js"></script><![endif]–>
+</head>
+<body>
+    #parse("/include/header.html")
+
+
+
+    <div class="wrapper container">
+        <img class="container-line" src="/resources/images/footer-line.gif">
+
+        <img src="/resources/images/order/my-order.gif" alt="我的订单">
+
+        <table class="my-orders-list">
+            <thead>
+            <tr>
+                <th class="mo-title-photo"></th>
+                <th class="mo-title-name">饮料名称</th>
+                <th class="mo-title-num">数量</th>
+                <th class="mo-title-price">单价</th>
+                <th class="mo-title-info">订单信息</th>
+                <th class="mo-title-state">订单状态</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            #foreach ($order_temp in $orders)
+
+            <tr class="crat-list-item">
+                <td>
+                    <em>订单号：$order_temp.id</em>
+                    <em>总价：${order_temp.totalPrice()}</em>
+                    <br/>
+                </td>
+            </tr>
+
+
+            #foreach ($item in $order_temp.items)
+            <tr class="crat-list-item">
+                <td>
+                    <!-- <em>订单号：$order_temp.id</em> -->
+                    <img class="fo-item-photo" src="/resources/images/product-${item.product.shortChar}-165.gif" alt="${item.product.name}">
+                </td>
+
+                <td>$item.product.name</td>
+                <td>$item.totalCount</td>
+                <td>¥<strong class="item-price">25</strong></td>
+                <td>
+                    <span class="pay-type">货到付款</span>
+                    <a class="name" href="javascript:;">$order_temp.cargoName<span class="triangle"></span></a>
+                </td>
+                <td>
+                    <span class="state">
+                        #if ($order_temp.status == 1)
+                            未处理
+                        #elseif ($order_temp.status == 2)
+                            正在配货
+                        #elseif ($order_temp.status == 3)
+                            送货中
+                        #elseif ($order_temp.status == 4)
+                            已签收
+                        #elseif ($order_temp.status == 10)
+                            已退单
+                        #else
+                            未知状态
+                        #end
+                    </span>
+                    <!--
+                    <a class="cancel" href="javascript:;">取消发货</a>
+                    -->
+                </td>
+
+
+            </tr>
+
+            #end
+
+            #end
+
+            </tbody>
+        </table>
+
+
+        <!--
+        <div class="pagination clearfix">
+            <a class="disabled">&laquo; 上一页</a>
+            <a class="current" href="?page=1">1</a>
+            <a href="?page=2">2</a>
+            <a href="?page=3">3</a>
+            <a href="?page=4">4</a>
+            <a href="?page=5">5</a>
+            <a href="?page=6">6</a>
+            <a href="?page=7">7</a>
+            <span class="disabled">...</span>
+            <a href="?page=199">199</a>
+            <a href="?page=200">200</a>
+            <a href="?page=2">下一页 &raquo;</a>
+        </div>
+        -->
+
+
+
+        <img class="container-line" src="../resources/images/footer-line.gif"><br/><br/>
+
+
+
+        #parse("/include/product_link.html")
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+
+
+    <!--
+    <div class="js-tips mo-tips">
+        <p>收货地址：上海市浦东新区XX办公大楼2608 XX公司</p>
+        <p>手机号码：13912345678</p>
+        <a class="close-js-tips" href="javascipt:;">x</a>
+        <span class="js-tips-riangle"></span>
+    </div>
+    -->
+
+
+    <script src="/resources/scripts/jquery-1.10.2.js"></script>
+</body>
+</html>

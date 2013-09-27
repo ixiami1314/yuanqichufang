@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>购物车—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/order.css">
+
+    <!–[if lt IE9]><script src="/resources/scripts/html5.js"></script><![endif]–>
+</head>
+
+<body>
+    #parse("/include/header.html")
+
+
+    $!errorMessage
+
+
+    <div class="wrapper container">
+        <img class="container-line" src="/resources/images/footer-line.gif">
+
+        <img src="/resources/images/order/order-step-1.jpg" alt="我的购物车">
+        <form id="cratForm" class="crat-form" method="post">
+            <table class="crat-list">
+                <thead>
+                    <tr>
+                        <th class="crat-title-photo"></th>
+                        <th class="crat-title-name">饮料名称</th>
+                        <th class="crat-title-num">数量</th>
+                        <th class="crat-title-price">价格</th>
+                        <th class="crat-title-operating">操作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    #foreach ($item in $cart.items)
+
+                    <tr class="crat-list-item">
+                        <td><img class="crat-item-photo" src="/resources/images/product-${item.product.shortChar}-165.gif" alt="${item.product.name}"></td>
+                        <td>${item.product.name}</td>
+                        <td>
+                            <div class="numItem clearfix">
+                                <a class="reduce fl" href="/cart/item/update?cartId=${cart.id}&itemId=${item.id}&count=-1" title="减少一个"></a>
+                                <input class="amount fl" type="text" name="count" title="请输入购买量" value="${item.totalCount}" maxlength="8">
+                                <a class="increase fl" href="/cart/item/update?cartId=${cart.id}&itemId=${item.id}&count=1" title="增加一个"></a>
+                            </div>
+                        </td>
+                        <td>¥<strong class="item-price">${item.product.price}</strong></td>
+                        <td><a class="delete" href="/cart/item/remove?itemId=${item.id}">删除</a></td>
+                    </tr>
+
+                    #end
+
+                </tbody>
+
+
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            <p>商品总价：¥<strong>$!{cart.totalPrice()}</strong></p>
+                            <input class="submit" type="submit" value="" title="结算">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+
+
+
+        <img class="container-line" src="/resources/images/footer-line.gif"><br/><br/>
+
+
+
+        #parse("/include/product_link.html")
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+    <script src="/resources/scripts/jquery-1.10.2.js"></script>
+    <script src="/resources/scripts/register.js"></script>
+</body>
+</html>

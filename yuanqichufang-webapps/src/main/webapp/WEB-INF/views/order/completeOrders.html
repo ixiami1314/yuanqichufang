@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>完成订单</title>
+
+    <link rel="stylesheet" href="/resources/styles/reset.css">
+    <link rel="stylesheet" href="/resources/styles/common.css">
+    <link rel="stylesheet" href="/resources/styles/order.css">
+
+    <!–[if lt IE9]><script src="/resources/scripts/html5.js"></script><![endif]–>
+</head>
+
+<body>
+    #parse("/include/header.html")
+
+
+
+<div class="wrapper container">
+    <img class="container-line" src="/resources/images/footer-line.gif">
+
+    <img src="/resources/images/order/order-step-3.jpg" alt="完成订单">
+
+    <p class="order-complete-tips">感谢您提交订单，我们将尽快处理。</p>
+
+    <table class="fill-orders-list">
+        <caption class="orders-id">订单：$orderBook.id</caption>
+
+        <thead>
+        <tr>
+            <th class="fo-title-photo"></th>
+            <th class="fo-title-name">饮料名称</th>
+            <th class="fo-title-num">数量</th>
+            <th class="fo-title-price">单价</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+
+        #set ($lastPrice = 0)
+        #foreach ($item in $orderBook.items)
+        #set ($tp = ($item.product.price * $item.totalCount))
+        #set ($lastPrice = $lastPrice + $tp)
+
+        <tr class="crat-list-item">
+            <td><img class="fo-item-photo" src="/resources/images/product-${item.product.shortChar}-165.gif" alt="$item.product.name"></td>
+            <td>元气厨房 <b>${item.product.name}</b> 饮料</td>
+            <td>${item.totalCount}</td>
+            <td>¥<strong class="item-price">$tp</strong></td>
+        </tr>
+
+        #end
+
+        </tbody>
+    </table>
+
+    <dl class="co-info">
+        <dt><img alt="收货信息" src="/resources/images/order/tit-address.gif"></dt>
+        <dd>收&nbsp;&nbsp;货&nbsp;人：$orderBook.cargoName</dd>
+        <dd>手机号码：$orderBook.cargoPhone</dd>
+        <dd>收货地址：$orderBook.cargoAddress</dd>
+        #if ($orderBook.cargoDateArea == 1)
+        <dd>送货时间：$orderBook.cargoDate 上午10:00-11:00</dd>
+        #elseif ($orderBook.cargoDateArea == 2)
+        <dd>送货时间：$orderBook.cargoDate 下午12:00-13:00</dd>
+        #else
+        <dd>送货时间：$orderBook.cargoDate 上午14:00-15:00</dd>
+        #end
+
+        <dd>支付方式：货到付款（现金）</dd>
+        <dd><strong>应付金额：$lastPrice</strong></dd>
+    </dl>
+
+
+
+    <img class="container-line" src="/resources/images/footer-line.gif">
+    <br/><br/>
+
+
+
+    #parse("/include/product_link.html")
+</div>
+
+
+
+    #parse("/include/footer.html")
+
+
+
+<script src="/resources/scripts/jquery-1.10.2.js"></script>
+</body>
+</html>

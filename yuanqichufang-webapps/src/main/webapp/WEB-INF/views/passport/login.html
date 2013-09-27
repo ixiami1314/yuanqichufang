@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+
+    <title>登录—元气厨房—健康养生饮品，每日新鲜熬制</title>
+
+    <link rel="stylesheet" href="../resources/styles/reset.css">
+    <link rel="stylesheet" href="../resources/styles/common.css">
+    <link rel="stylesheet" href="../resources/styles/login.css">
+</head>
+
+<body>
+
+
+    #parse("/include/header.html")
+
+
+
+    <div class="wrapper container clearfix">
+        <img class="container-line" src="../resources/images/footer-line.gif">
+
+        <div class="login-deploy fl"><img src="../resources/images/passport/login-deploy.jpg"></div>
+
+        <form id="loginForm" class="login-form fr" method="post">
+            <legend><img src="../resources/images/passport/login-title.gif" alt="账号登录"></legend>
+            <label>
+                <span>账号</span>
+                <input type="text" name="passport" maxlength="32" placeholder="请输入您的账号">
+            </label>
+            <!--
+            <span class="error-warn">请输入您的账号</span>
+            -->
+            #if($errorMessageNullObject)
+            <span class="error-warn">$errorMessageNullObject</span>
+            #end
+            <label>
+                <span>密码</span>
+                <input type="password" name="password" maxlength="25" placeholder="请输入密码">
+            </label>
+            <!--
+            <span class="error-warn">请输入密码</span>
+            -->
+            #if($errorMessagePasswordError)
+            <span class="error-warn">$errorMessagePasswordError</span>
+            #end
+            #if($errorMessageNullSession)
+            <span class="error-warn">$errorMessageNullSession</span>
+            #end
+            <a class="forgot" target="_blank" href="forgot.html">忘记密码</a>
+            <input type="hidden" name="params" value="$!params" />
+            <input class="submit hand" type="submit" value="">
+        </form>
+    </div>
+
+
+
+    #parse("/include/footer.html")
+
+
+
+    <script src="../resources/scripts/jquery-1.10.2.js"></script>
+    <script src="../resources/scripts/login.js"></script>
+</body>
+</html>
